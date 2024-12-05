@@ -5,24 +5,6 @@ using System.Reflection.Metadata;
 
 namespace QuestPDFViewer.Extentions;
 
-public static class DateTimeExtention
-{
-    public static List<DateTime> DateInRange(
-        this DateTime begin, 
-        DateTime end)
-    {
-        var fecha = new DateTime(begin.Year, begin.Month, begin.Day);
-
-        var fechas = new List<DateTime>() { fecha }; 
-        while (end.Date > fecha.Date)
-        {
-            fecha = fecha.AddDays(1);
-            fechas.Add(fecha.Date);
-        }
-        return fechas;
-    }
-}
-
 public static class QuestPDFExtention
 {
     #region Conduce
